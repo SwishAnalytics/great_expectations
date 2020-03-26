@@ -4,7 +4,21 @@
 
 <!-- <<<Super-quickstart links go here>>> -->
 
+ALI EDIT: 
 
+This repo includes minor changes to open source great_expectations library to make it compatible for Python 3.5.3. 
+Forked from: https://github.com/great-expectations/great_expectations
+
+To keep forked repo up to date with upstream repo, do the following:  
+
+# Fetch from upstream remote
+git fetch upstream
+# View all branches, including those from upstream
+git branch -va
+# Run the following commands  to update our fork with the latest upstream changes. The upstream has already been set. 
+
+git checkout py3.5_branch # our in-house library 
+git merge upstream/develop
 
 <img align="right" src="./generic_dickens_protagonist.png">
 
