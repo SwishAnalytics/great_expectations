@@ -3,7 +3,7 @@ import importlib
 import json
 import logging
 
-import black
+#import black
 from six import string_types
 
 from great_expectations.core import expectationSuiteSchema
@@ -502,15 +502,15 @@ def gen_directory_tree_str(startpath):
     return output_str
 
 
-def lint_code(code):
-    """Lint strings of code passed in."""
-    black_file_mode = black.FileMode()
-    if not isinstance(code, str):
-        raise TypeError
-    try:
-        linted_code = black.format_file_contents(
-            code, fast=True, mode=black_file_mode
-        )
-        return linted_code
-    except (black.NothingChanged, RuntimeError):
-        return code
+# def lint_code(code):
+#     """Lint strings of code passed in."""
+#     black_file_mode = black.FileMode()
+#     if not isinstance(code, str):
+#         raise TypeError
+#     try:
+#         linted_code = black.format_file_contents(
+#             code, fast=True, mode=black_file_mode
+#         )
+#         return linted_code
+#     except (black.NothingChanged, RuntimeError):
+#         return code
