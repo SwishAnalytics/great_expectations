@@ -11,13 +11,17 @@ Forked from: https://github.com/great-expectations/great_expectations
 
 To keep forked repo up to date with upstream repo, do the following:  
 
-# Fetch from upstream remote
-git fetch upstream
-# View all branches, including those from upstream
-git branch -va
-# Run the following commands  to update our fork with the latest upstream changes. The upstream has already been set. 
+Fetch from upstream remote
 
-git checkout swish_compatible_branch # our in-house library 
+git fetch upstream
+
+View all branches, including those from upstream
+
+git branch -va
+
+Run the following commands  to update our fork with the latest upstream changes. The upstream has already been set. 
+
+git checkout swish_compatible_branch 
 git merge upstream/develop
 
 <img align="right" src="./generic_dickens_protagonist.png">
