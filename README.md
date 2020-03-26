@@ -24,6 +24,10 @@ Run the following commands  to update our fork with the latest upstream changes.
 git checkout swish_compatible_branch 
 git merge upstream/develop
 
+To install this version of the library: 
+
+pip install -e git+git://github.com/SwishAnalytics/great_expectations.git@swish_compatible_branch#egg=great_expectations
+
 <img align="right" src="./generic_dickens_protagonist.png">
 
 Great Expectations
