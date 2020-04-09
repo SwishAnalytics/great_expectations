@@ -235,14 +235,14 @@ def parse_evaluation_parameter(parameter_expression, evaluation_parameters=None)
     else:
         err_str, err_line, err_col = L[-1]
         raise EvaluationParameterError(
-            f"Parse Failure: {err_str}\nStatement: {err_line}\nColumn: {err_col}"
+            "Parse Failure: {err_str}\nStatement: {err_line}\nColumn: {err_col}"
         )
 
     try:
         result = expr.evaluate_stack(expr.exprStack)
     except Exception as e:
         exception_traceback = traceback.format_exc()
-        exception_message = f'{type(e).__name__}: "{str(e)}".  Traceback: "{exception_traceback}".'
+        exception_message = '{type(e).__name__}: "{str(e)}".  Traceback: "{exception_traceback}".'
         logger.debug(exception_message, e, exc_info=True)
         raise EvaluationParameterError("Error while evaluating evaluation parameter expression: " + str(e))
 
