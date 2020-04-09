@@ -39,7 +39,7 @@ class ContentBlockRenderer(Renderer):
     def render(cls, render_object, **kwargs):
         cls.validate_input(render_object)
 
-        data_docs_exception_message = f'''\
+        data_docs_exception_message = '''\
 An unexpected Exception occurred during data docs rendering.  Because of this error, certain parts of data docs will \
 not be rendered properly and/or may not appear altogether.  Please use the trace, included in this message, to \
 diagnose and repair the underlying issue.  Detailed information follows:  
@@ -66,7 +66,7 @@ diagnose and repair the underlying issue.  Detailed information follows:
                     except Exception as e:
                         exception_traceback = traceback.format_exc()
                         exception_message = data_docs_exception_message \
-                            + f'{type(e).__name__}: "{str(e)}".  Traceback: "{exception_traceback}".'
+                            + '{type(e).__name__}: "{str(e)}".  Traceback: "{exception_traceback}".'
                         logger.error(exception_message, e, exc_info=True)
 
                         if isinstance(obj_, ExpectationValidationResult):
@@ -137,7 +137,7 @@ diagnose and repair the underlying issue.  Detailed information follows:
                 except Exception as e:
                     exception_traceback = traceback.format_exc()
                     exception_message = data_docs_exception_message \
-                        + f'{type(e).__name__}: "{str(e)}".  Traceback: "{exception_traceback}".'
+                        + '{type(e).__name__}: "{str(e)}".  Traceback: "{exception_traceback}".'
                     logger.error(exception_message, e, exc_info=True)
 
                     if isinstance(render_object, ExpectationValidationResult):
