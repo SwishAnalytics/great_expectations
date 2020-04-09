@@ -19,7 +19,7 @@ def verify_dynamic_loading_support(module_name, package_name=None):
     if not module_spec:
         if not package_name:
             package_name = ''
-        message = f'''No module named "{package_name + module_name}" could be found in the repository. Please \
+        message = '''No module named "{package_name + module_name}" could be found in the repository. Please \
 make sure that the file, corresponding to this package and module, exists and that dynamic loading of code modules, \
 templates, and assets is supported in your execution environment.  This error is unrecoverable.
         '''

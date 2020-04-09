@@ -213,12 +213,12 @@ class ClassInstantiationError(GreatExpectationsError):
         if not module_spec:
             if not package_name:
                 package_name = ''
-            self.message = f'''No module named "{package_name + module_name}" could be found in the repository.  \
+            self.message = '''No module named "{package_name + module_name}" could be found in the repository.  \
 Please make sure that the file, corresponding to this package and module, exists and that dynamic loading of code \
 modules, templates, and assets is supported in your execution environment.  This error is unrecoverable.
             '''
         else:
-            self.message = f'''The module "{module_name}" exists; however, the system is unable to create an instance \
+            self.message = '''The module "{module_name}" exists; however, the system is unable to create an instance \
 of the class "{class_name}", searched for inside this module.  Please make sure that the class named "{class_name}" is \
 properly defined inside its intended module and declared correctly by the calling entity.  This error is unrecoverable.
             '''
